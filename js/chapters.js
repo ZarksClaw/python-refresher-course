@@ -6,7 +6,7 @@ const CHAPTERS = [
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Hello, Python!</h3>
           <p>Python is an interpreted, high-level, general-purpose programming language known for its readability and simplicity.</p>
           <div class="code-block"><span class="keyword">print</span>(<span class="string">"Hello, World!"</span>)</div>
@@ -20,7 +20,7 @@ const CHAPTERS = [
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Variables &amp; Basic Types</h3>
           <p>Variables are created by assignment. No declaration needed.</p>
           <div class="code-block">name = <span class="string">"Alice"</span>      <span class="comment"># str</span>
@@ -28,22 +28,22 @@ age = <span class="number">30</span>            <span class="comment"># int</spa
 height = <span class="number">5.8</span>        <span class="comment"># float</span>
 is_student = <span class="literal">True</span>   <span class="comment"># bool</span></div>
           <p>Use <code>type()</code> to check the type of any value.</p>
-          <div class="code-block"><span class="keyword">print</span>(<span class="keyword">type</span>(age))   <span class="comment"># <class 'int'></span></div>
+          <div class="code-block"><span class="keyword">print</span>(<span class="keyword">type</span>(age))   <span class="comment"># &lt;class 'int'&gt;</span></div>
         `
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Basic Operators</h3>
           <div class="code-block"><span class="comment"># Arithmetic</span>
 a + b   a - b   a * b   a / b   a // b   a % b   a ** b
 
 <span class="comment"># Comparison</span>
-==  !=  <  >  <=  >=
+==  !=  &lt;  &gt;  &lt;=  &gt;=
 
 <span class="comment"># Logical</span>
 <span class="keyword">and</span>  <span class="keyword">or</span>  <span class="keyword">not</span></div>
-          <p>Note: <code>/</code> always returns a float; use <code>//</code> for integer division.</p>
+          <p>Note: <code>/</code> on integers produces a float. <code>//</code> performs floor division; a float operand can produce a float result.</p>
         `
       },
       {
@@ -65,7 +65,7 @@ a + b   a - b   a * b   a / b   a // b   a % b   a ** b
         question: 'What type does `type(3.14)` return?',
         options: ['int', 'float', 'str', 'complex'],
         correct: 1,
-        explanation: '3.14 is a float literal.'
+        explanation: '3.14 is a float literal, so type(3.14) returns the float class.'
       },
       {
         question: 'Which operator performs exponentiation in Python?',
@@ -83,7 +83,7 @@ a + b   a - b   a * b   a / b   a // b   a % b   a ** b
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>if / elif / else</h3>
           <p>Conditional execution uses <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
           <div class="code-block">x = <span class="number">10</span>
@@ -98,7 +98,7 @@ a + b   a - b   a * b   a / b   a // b   a % b   a ** b
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Loops: for &amp; while</h3>
           <div class="code-block"><span class="comment"># For loop over a range</span>
 <span class="keyword">for</span> i <span class="keyword">in</span> <span class="keyword">range</span>(<span class="number">5</span>):
@@ -118,7 +118,7 @@ count = <span class="number">0</span>
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>List Comprehensions</h3>
           <p>A concise way to create lists.</p>
           <div class="code-block"><span class="comment"># Traditional</span>
@@ -178,7 +178,7 @@ evens = [i <span class="keyword">for</span> i <span class="keyword">in</span> <s
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Defining Functions</h3>
           <p>Functions are defined with the <code>def</code> keyword.</p>
           <div class="code-block"><span class="keyword">def</span> <span class="function">greet</span>(name):
@@ -190,7 +190,7 @@ evens = [i <span class="keyword">for</span> i <span class="keyword">in</span> <s
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Arguments: Positional &amp; Keyword</h3>
           <div class="code-block"><span class="keyword">def</span> <span class="function">describe</span>(name, age=<span class="number">0</span>, *hobbies, **details):
     <span class="keyword">print</span>(<span class="string">f"Name: {name}, Age: {age}"</span>)
@@ -208,7 +208,7 @@ evens = [i <span class="keyword">for</span> i <span class="keyword">in</span> <s
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Scope Rules (LEGB)</h3>
           <p>Python resolves names in this order:</p>
           <ol>
@@ -270,7 +270,7 @@ evens = [i <span class="keyword">for</span> i <span class="keyword">in</span> <s
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Lists</h3>
           <p>Ordered, mutable sequences.</p>
           <div class="code-block">nums = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]
@@ -283,7 +283,7 @@ nums[<span class="number">1</span>:<span class="number">3</span>]             <s
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Tuples</h3>
           <p>Ordered, immutable sequences. Useful for fixed data.</p>
           <div class="code-block">point = (<span class="number">3</span>, <span class="number">4</span>)
@@ -300,7 +300,7 @@ a - b  <span class="comment"># difference: {1,2}</span></div>
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Dictionaries</h3>
           <p>Key-value mappings, ordered (as of Python 3.7+).</p>
           <div class="code-block">student = {
@@ -360,7 +360,7 @@ student.values()            <span class="comment"># dict_values view</span></div
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>String Basics &amp; Methods</h3>
           <p>Strings are immutable sequences of characters.</p>
           <div class="code-block">s = <span class="string">"  Hello, Python!  "</span>
@@ -374,7 +374,7 @@ s.split(<span class="string">","</span>)     <span class="comment"># ["  Hello",
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>String Formatting</h3>
           <p>Python offers several ways to format strings. <strong>f-strings</strong> (Python 3.6+) are preferred.</p>
           <div class="code-block">name = <span class="string">"Alice"</span>
@@ -392,7 +392,7 @@ age = <span class="number">30</span>
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Regex with <code>re</code> Module</h3>
           <div class="code-block"><span class="keyword">import</span> re
 
@@ -450,7 +450,7 @@ re.sub(pattern, <span class="string">"#"</span>, text) <span class="comment"># "
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Opening &amp; Closing Files</h3>
           <p>Use the built-in <code>open()</code> function. Always close files, preferably with a context manager.</p>
           <div class="code-block"><span class="comment"># With context manager (recommended)</span>
@@ -468,12 +468,13 @@ re.sub(pattern, <span class="string">"#"</span>, text) <span class="comment"># "
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Reading Methods</h3>
           <div class="code-block"><span class="keyword">with</span> <span class="keyword">open</span>(<span class="string">"data.txt"</span>) <span class="keyword">as</span> f:
-    entire = f.read()        <span class="comment"># whole file as string</span>
-    line = f.readline()      <span class="comment"># single line</span>
-    lines = f.readlines()    <span class="comment"># list of all lines</span>
+    entire = f.read()        <span class="comment"># consumes the whole file</span>
+    f.seek(0)               <span class="comment"># rewind before another read</span>
+    line = f.readline()      <span class="comment"># first line</span>
+    lines = f.readlines()    <span class="comment"># remaining lines</span>
 
 <span class="comment"># Iterate directly (memory efficient)</span>
 <span class="keyword">with</span> <span class="keyword">open</span>(<span class="string">"data.txt"</span>) <span class="keyword">as</span> f:
@@ -483,7 +484,7 @@ re.sub(pattern, <span class="string">"#"</span>, text) <span class="comment"># "
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Writing &amp; JSON</h3>
           <div class="code-block"><span class="comment"># Writing</span>
 <span class="keyword">with</span> <span class="keyword">open</span>(<span class="string">"out.txt"</span>, <span class="string">"w"</span>) <span class="keyword">as</span> f:
@@ -511,7 +512,7 @@ data = {<span class="string">"name"</span>: <span class="string">"Alice"</span>,
       {
         type: 'question',
         question: 'Which mode opens a file for writing without truncating it?',
-        options: ['"w"', '"a"', '"r"', '"x"'],
+        options: ['"w"', '"a"', '"r"', '"w+"'],
         correct: 1,
         explanation: '`"a"` (append) opens a file for writing, and new data is written at the end without truncating.'
       }
@@ -525,7 +526,7 @@ data = {<span class="string">"name"</span>: <span class="string">"Alice"</span>,
       },
       {
         question: 'Which function writes a string to a file without adding a newline?',
-        options: ['writeline()', 'write()', 'writelines()', 'print()'],
+        options: ['writeline()', 'write()', 'read()', 'print()'],
         correct: 1,
         explanation: 'file.write() writes a string without appending a newline.'
       },
@@ -545,7 +546,7 @@ data = {<span class="string">"name"</span>: <span class="string">"Alice"</span>,
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Try / Except</h3>
           <p>Python uses <code>try</code>/<code>except</code> blocks to handle exceptions gracefully.</p>
           <div class="code-block"><span class="keyword">try</span>:
@@ -563,7 +564,7 @@ data = {<span class="string">"name"</span>: <span class="string">"Alice"</span>,
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Raising &amp; Custom Exceptions</h3>
           <div class="code-block"><span class="keyword">class</span> <span class="class">ValidationError</span>(Exception):
     <span class="string">"""Custom exception for validation failures."""</span>
@@ -583,7 +584,7 @@ data = {<span class="string">"name"</span>: <span class="string">"Alice"</span>,
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Common Built-in Exceptions</h3>
           <ul>
             <li><code>ValueError</code> — wrong value</li>
@@ -619,10 +620,10 @@ data = {<span class="string">"name"</span>: <span class="string">"Alice"</span>,
         explanation: 'The `else` block runs only if no exception was raised in the try block.'
       },
       {
-        question: 'How do you catch any exception?',
+        question: 'Which handler catches ordinary application errors while allowing KeyboardInterrupt and SystemExit to propagate?',
         options: ['except Exception as e', 'except:', 'except * as e', 'Both A and B'],
-        correct: 3,
-        explanation: '`except:` (bare except) catches all exceptions, as does `except Exception as e` (though bare except is discouraged).'
+        correct: 0,
+        explanation: 'except Exception as e catches ordinary application errors. A bare except also catches BaseException subclasses such as KeyboardInterrupt and SystemExit.'
       },
       {
         question: 'What does `raise` do without an argument?',
@@ -640,23 +641,23 @@ data = {<span class="string">"name"</span>: <span class="string">"Alice"</span>,
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Importing Modules</h3>
           <div class="code-block"><span class="comment"># Various import styles</span>
 <span class="keyword">import</span> math
 <span class="keyword">import</span> os.path
 <span class="keyword">from</span> datetime <span class="keyword">import</span> datetime
 <span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict <span class="keyword">as</span> dd
-<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+<span class="keyword">import</span> statistics <span class="keyword">as</span> stats
 
 <span class="keyword">print</span>(math.sqrt(<span class="number">16</span>))      <span class="comment"># 4.0</span>
 <span class="keyword">print</span>(datetime.now())    <span class="comment"># current date/time</span></div>
-          <p>A module is a <code>.py</code> file. A package is a directory with an <code>__init__.py</code>.</p>
+          <p>A module is a <code>.py</code> file. A regular package contains <code>__init__.py</code>; namespace packages can omit it.</p>
         `
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>The <code>__name__</code> Variable</h3>
           <p>Every module has a <code>__name__</code> attribute. It is <code>"__main__"</code> when the file is run directly.</p>
           <div class="code-block"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
@@ -667,20 +668,20 @@ data = {<span class="string">"name"</span>: <span class="string">"Alice"</span>,
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>pip &amp; Virtual Environments</h3>
           <div class="code-block"><span class="comment"># Install packages</span>
-pip install requests
+python -m pip install requests
 
 <span class="comment"># Create a virtual environment</span>
 python -m venv venv
 <span class="comment"># Activate (Linux/Mac)</span>
 <span class="keyword">source</span> venv/bin/activate
-<span class="comment"># Activate (Windows)</span>
-venv\Scripts\activate
+<span class="comment"># Activate (Windows PowerShell)</span>
+venv\Scripts\Activate.ps1
 
 <span class="comment"># Freeze requirements</span>
-pip freeze > requirements.txt</div>
+python -m pip freeze > requirements.txt</div>
           <p>Always use virtual environments to isolate project dependencies.</p>
         `
       },
@@ -693,10 +694,10 @@ pip freeze > requirements.txt</div>
       },
       {
         type: 'question',
-        question: 'Which file makes a directory a Python package?',
+        question: 'Which file marks a regular Python package?',
         options: ['main.py', 'init.py', '__init__.py', 'package.py'],
         correct: 2,
-        explanation: 'An `__init__.py` file (can be empty) marks a directory as a Python package.'
+        explanation: 'An `__init__.py` file (can be empty) marks a regular package; namespace packages may omit it.'
       }
     ],
     quiz: [
@@ -708,7 +709,7 @@ pip freeze > requirements.txt</div>
       },
       {
         question: 'What command creates a requirements file?',
-        options: ['pip list > requirements.txt', 'pip freeze > requirements.txt', 'pip export > requirements.txt', 'pip save > requirements.txt'],
+        options: ['pip list > requirements.txt', 'python -m pip freeze > requirements.txt', 'pip export > requirements.txt', 'pip save > requirements.txt'],
         correct: 1,
         explanation: '`pip freeze` outputs installed packages in requirements format, which can be redirected to a file.'
       },
@@ -728,7 +729,7 @@ pip freeze > requirements.txt</div>
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Classes &amp; Instances</h3>
           <div class="code-block"><span class="keyword">class</span> <span class="class">Dog</span>:
     species = <span class="string">"Canis familiaris"</span>  <span class="comment"># class attribute</span>
@@ -743,12 +744,12 @@ pip freeze > requirements.txt</div>
 buddy = <span class="class">Dog</span>(<span class="string">"Buddy"</span>, <span class="number">3</span>)
 <span class="keyword">print</span>(buddy.bark())               <span class="comment"># Buddy says Woof!</span>
 <span class="keyword">print</span>(buddy.species)              <span class="comment"># Canis familiaris</span></div>
-          <p><code>self</code> refers to the current instance. It is always the first parameter of instance methods.</p>
+          <p><code>self</code> refers to the current instance. It is the conventional name for the first parameter of an ordinary instance method.</p>
         `
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Inheritance</h3>
           <div class="code-block"><span class="keyword">class</span> <span class="class">Puppy</span>(<span class="class">Dog</span>):    <span class="comment"># Inherits from Dog</span>
     <span class="keyword">def</span> <span class="function">__init__</span>(self, name, age, toy):
@@ -765,7 +766,7 @@ pup = <span class="class">Puppy</span>(<span class="string">"Max"</span>, <span 
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Magic Methods &amp; Properties</h3>
           <div class="code-block"><span class="keyword">class</span> <span class="class">Vector</span>:
     <span class="keyword">def</span> <span class="function">__init__</span>(self, x, y):
@@ -786,10 +787,10 @@ pup = <span class="class">Puppy</span>(<span class="string">"Max"</span>, <span 
       },
       {
         type: 'question',
-        question: 'Which method is the constructor in a Python class?',
+        question: 'Which method initializes a newly created Python instance?',
         options: ['__construct__', '__new__', '__init__', '__create__'],
         correct: 2,
-        explanation: '__init__ is the initializer (constructor) called after the object is created.'
+        explanation: '__new__ creates an instance; __init__ initializes it after creation and must return None.'
       },
       {
         type: 'question',
@@ -807,10 +808,10 @@ pup = <span class="class">Puppy</span>(<span class="string">"Max"</span>, <span 
         explanation: 'The @property decorator allows a method to be accessed like an attribute (without parentheses).'
       },
       {
-        question: 'What is the first argument of every instance method?',
+        question: 'What is the conventional name of the instance parameter?',
         options: ['cls', 'this', 'self', 'instance'],
         correct: 2,
-        explanation: 'self refers to the instance and is always the first parameter of instance methods.'
+        explanation: 'self is the conventional name for the instance parameter, not a reserved keyword.'
       },
       {
         question: 'Which magic method is called by `str(obj)`?',
@@ -828,15 +829,17 @@ pup = <span class="class">Puppy</span>(<span class="string">"Max"</span>, <span 
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Decorators</h3>
           <p>A decorator is a function that wraps another function to extend its behavior.</p>
           <div class="code-block"><span class="keyword">def</span> <span class="function">timer</span>(func):
     <span class="keyword">import</span> time
+    <span class="keyword">from</span> functools <span class="keyword">import</span> wraps
+    @wraps(func)
     <span class="keyword">def</span> <span class="function">wrapper</span>(*args, **kwargs):
-        start = time.time()
+        start = time.perf_counter()
         result = func(*args, **kwargs)
-        <span class="keyword">print</span>(<span class="string">f"Took {time.time()-start:.3f}s"</span>)
+        <span class="keyword">print</span>(<span class="string">f"Took {time.perf_counter()-start:.3f}s"</span>)
         <span class="keyword">return</span> result
     <span class="keyword">return</span> wrapper
 
@@ -849,7 +852,7 @@ pup = <span class="class">Puppy</span>(<span class="string">"Max"</span>, <span 
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Generators</h3>
           <p>Generators yield values lazily using the <code>yield</code> keyword.</p>
           <div class="code-block"><span class="keyword">def</span> <span class="function">fibonacci</span>(n):
@@ -865,7 +868,7 @@ pup = <span class="class">Puppy</span>(<span class="string">"Max"</span>, <span 
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3>Context Managers</h3>
           <p>Use <code>__enter__</code> and <code>__exit__</code> or <code>@contextmanager</code>.</p>
           <div class="code-block"><span class="keyword">from</span> contextlib <span class="keyword">import</span> contextmanager
@@ -926,7 +929,7 @@ pup = <span class="class">Puppy</span>(<span class="string">"Max"</span>, <span 
     steps: [
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3><code>collections</code> Module</h3>
           <div class="code-block"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter, defaultdict, deque
 
@@ -946,7 +949,7 @@ dq.pop()             <span class="comment"># 3</span></div>
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3><code>itertools</code> &amp; <code>datetime</code></h3>
           <div class="code-block"><span class="keyword">from</span> itertools <span class="keyword">import</span> chain, cycle, permutations
 <span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta
@@ -962,7 +965,7 @@ yesterday = now - <span class="class">timedelta</span>(days=<span class="number"
       },
       {
         type: 'lesson',
-        content: `
+        content: String.raw`
           <h3><code>os</code>, <code>sys</code>, &amp; <code>pathlib</code></h3>
           <div class="code-block"><span class="keyword">import</span> os, sys
 <span class="keyword">from</span> pathlib <span class="keyword">import</span> Path
